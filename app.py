@@ -3,6 +3,7 @@ import pickle
 
 app = Flask(__name__)  # initialising flask app
 
+model = pickle.load(open('model', 'rb')) # load ml model
 
 @app.route('/', methods=['GET'])
 def home():
@@ -33,7 +34,7 @@ def predict():
         else:
             transmission_type = 0
 
-        model = pickle.load(open('model', 'rb'))  # load ml model
+        #model = pickle.load(open('model', 'rb'))  # load ml model
         prediction = model.predict([[present_price, car_age, fuel_type, seller_type, transmission_type]])
         output = round(prediction[0], 2)
 
