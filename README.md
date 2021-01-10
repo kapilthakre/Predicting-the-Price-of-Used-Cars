@@ -14,7 +14,7 @@ In this Project, we are going to predict the Price of Used Cars using various fe
 
 
 ## WebApp
-* If you want to view the deployed model, click on the following link: https://used-car-price-prediction-k.herokuapp.com/
+* If you want to view the deployed model, click on the following link: https://ucppredict.herokuapp.com/
 
 * If you are searching for Code, Algorithms used and Accuracy of the model Please Open "Used Car Price Prediction.ipynb" file
 
