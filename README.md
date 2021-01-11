@@ -18,4 +18,4 @@ In this Project, we are going to predict the Price of Used Cars using various fe
 
 * If you are searching for Code, Algorithms used and Accuracy of the model Please Open "Used Car Price Prediction.ipynb" file
 
-* Please do ⭐ the repository, if it helped you in anyway.
+* And Please do ⭐ the repository, if it helped you in anyway.
