@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Car Price Prediction</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+<!-- Navigation Bar-->
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <!-- Links -->
+  <ul class="navbar-nav">
+    <li class="nav-item">
+      <a class="nav-link" href="https://used-car-price-prediction-k.herokuapp.com">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">About</a>
+    </li>
+  </ul>
+</nav>
+<br>
+
+
+
+<div class="container">
+  <!--<img align="middle" src="https://image.freepik.com/free-vector/by-my-car-illustration-concept_114360-870.jpg"> -->
+  <h1>Used Car Price Prediction</h1>
+  <p style="font-style: italic;">Fill the Details to predict the price of your car</p>
+
+    <!-- User Input Form-->
+    <form action="/" method="POST">
+        <div class="form-group">
+            <label for="Price">What is The Present ShowRoom Price:</label>
+            <input type="number" step="0.01" class="form-control" placeholder="Price (In Lakh)" id="Price" name="price" required><br>
+
+            <label for="Age">Car Age:</label>
+            <input type="number" step="0.01" class="form-control" placeholder="Age" id="Age" name="age" required><br>
+
+            <label for="fuel">What is The Fuel Type:</label>
+            <select class="form-control" id="fuel" name="fuel">
+                <option value="Petrol">Petrol</option>
+                <option value="Diesel">Diesel</option>
+                <option value="CNG">CNG</option>
+            </select><br>
+
+            <label for="seller">Are You a Dealer or Individual:</label>
+            <select class="form-control" id="seller" name="seller">
+                <option value="Individual">Individual</option>
+                <option value="Dealer">Dealer</option>
+            </select><br>
+
+            <label for="transmission">Transmission Type:</label>
+            <select class="form-control" id="transmission" name="transmission">
+                <option value="Manual">Manual</option>
+                <option value="Automatic">Automatic</option>
+            </select>
+
+            <div class="button-group" style="margin-top:15px;"><br>
+                <button type="submit" name="submit" class="btn btn-primary">Submit</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+<!-- After Prediction -->
+
+<div class="container">
+  <h2></h2>
+  <div class="alert alert-info" role="alert">
+    <strong></strong> Pridicted price of your car is : {{output}}
+  </div>
+</div>
+
+
+  
+</body>
+</html>
